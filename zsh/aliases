@@ -1,4 +1,16 @@
-# cd
+# Include secrets
+. ~/.zsh/secrets
+
+# Include rvm
+[[ -s "/Users/brian/.rvm/scripts/rvm" ]] && source "/Users/brian/.rvm/scripts/rvm"
+
+# Default to 1.9.2
+rvm use 1.9.2
+
+#export CC=gcc-4.2
+export CC=/usr/bin/gcc-4.2
+
+#cd
 alias ..='cd ..'
 
 # ls
@@ -31,3 +43,52 @@ alias rst='touch tmp/restart.txt'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+export PATH=$PATH:/opt/local/bin
+export PATH=$PATH:/usr/local/smlnj-110.72/bin
+export MANPATH=$MANPATH:/opt/local/share/man
+export INFOPATH=$INFOPATH:/opt/local/share/info
+
+export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:/opt/local/lib/postgresql83/bin
+export PATH=$PATH:/opt/local/android-sdk/tools
+export PATH=$PATH:/opt/local/android-sdk/platform-tools
+
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.history
+
+alias gpom="git push origin master"
+alias gphm="git push heroku master&"
+alias gp="git pull origin master"
+alias gca="git commit -a"
+alias gcam="git commit -a -m"
+alias gs="git status"
+alias ga="git add"
+alias gd="git diff"
+
+alias rc="vim ~/.dotfiles/zsh/aliases"
+alias src="source ~/.zshrc"
+alias project="cd /Users/brian/code/wtfmom2/"
+alias hw="cd /Users/brian/code/105partner; gs"
+alias mvim="~/mvim"
+alias cs="ssh bjorda02@linux.cs.tufts.edu"
+
+alias hack="cd ~/code/gifurl/"
+alias hack="cd ~/code/faceprint/"
+alias hackjustin="cd ~/code/justinTV/"
+alias fiddle="cd ~/code/fiddle"
+
+alias pgstart="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb -l /opt/local/var/log/postgresql83/postgres.log start'"
+alias pgstop="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl -D /opt/local/var/db/postgresql83/defaultdb stop -m fast'"
+alias pgstatus="sudo su postgres -c '/opt/local/lib/postgresql83/bin/pg_ctl status -D /opt/local/var/db/postgresql83/defaultdb'"
+alias pgres="sudo -u postgres psql"
+alias cdt="cd /Volumes/bjorda02@linux.cs.tufts.edu"
+alias gr="ps aux | grep ruby"
+
+alias rss="rails server"
+alias dbm="rake db:migrate"
+
+alias wget="wget --no-check-certificate"
+
+# exec screen -RR

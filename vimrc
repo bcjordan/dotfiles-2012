@@ -205,3 +205,6 @@ function! OpenURL()
 endfunction
 map <Leader>w :call OpenURL()<CR>
 
+" Open NERDTree by default. Switch to other editor.
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
