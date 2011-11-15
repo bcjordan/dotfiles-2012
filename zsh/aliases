@@ -1,14 +1,11 @@
-# Include secrets
-. ~/.zsh/secrets
-
 # Include rvm
-[[ -s "/Users/brian/.rvm/scripts/rvm" ]] && source "/Users/brian/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Default to 1.9.2
 rvm use 1.9.2
 
 #export CC=gcc-4.2
-export CC=/usr/bin/gcc-4.2
+#export CC=/usr/bin/gcc-4.2
 
 #cd
 alias ..='cd ..'
@@ -67,7 +64,7 @@ alias gs="git status"
 alias ga="git add"
 alias gd="git diff"
 
-alias rc="vim ~/.dotfiles/zsh/aliases"
+alias rc="vim ~/dotfiles/zsh/aliases"
 alias src="source ~/.zshrc"
 alias project="cd /Users/brian/code/wtfmom2/"
 alias hw="cd /Users/brian/code/105partner; gs"
