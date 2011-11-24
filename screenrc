@@ -18,3 +18,8 @@ termcapinfo xterm-256color|xterm-color|xterm|xterms|xs|rxvt ti@:te@
 # make ctrl+a b copy text to OS X clipboard
 bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
 
+# I use control+a for beginning-of-line, this remaps it to the tick/tilda key
+escape ``
+  
+# Bind tick+e to show the tick character since tick+tick is too convenience to toggle windows
+escape `e
