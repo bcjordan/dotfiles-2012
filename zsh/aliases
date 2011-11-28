@@ -1,11 +1,10 @@
 # Include rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Default to 1.9.2
-rvm use 1.9.2
+# Default to 1.9.3
+rvm use 1.9.3-head@rails31
 
-#export CC=gcc-4.2
-#export CC=/usr/bin/gcc-4.2
+export CC=gcc-4.2
 
 #cd
 alias ..='cd ..'
@@ -64,7 +63,7 @@ alias gs="git status"
 alias ga="git add"
 alias gd="git diff"
 
-alias rc="vim ~/dotfiles/zsh/aliases"
+alias rc="vim ~/.dotfiles/zsh/aliases"
 alias src="source ~/.zshrc"
 alias project="cd /Users/brian/code/wtfmom2/"
 alias hw="cd /Users/brian/code/105partner; gs"
@@ -87,5 +86,7 @@ alias rss="rails server"
 alias dbm="rake db:migrate"
 
 alias wget="wget --no-check-certificate"
+
+alias mate="/Applications/TextMate.app/Contents/Resources/mate"
 
 # exec screen -RR
