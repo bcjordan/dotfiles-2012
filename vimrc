@@ -1,5 +1,11 @@
 " based on http://github.com/jferris/config_files/blob/master/vimrc
 
+" available plugins and tricks:
+" ctrl+r and tab -- snipmate all possible suggestions
+" :FufFile -- open fuzzy finder file
+" gc -- toggle comment
+" zR opens all folds and zM closes all folds
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -71,13 +77,13 @@ else
 
 endif " has("autocmd")
 
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
+if has("folding")
+  set foldenable
+  set foldmethod=syntax
+  set foldlevel=1
+  set foldnestmax=2
+  " set foldtext=strpart(getline(v:foldstart),0,50).'\\\\ ...\\\\ '.substitute(getline(v:foldend),'^[\\\\ #]*','','g').'\\\\ '
+endif
 
 " Softtabs, 2 spaces
 set tabstop=2
